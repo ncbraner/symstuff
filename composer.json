@@ -1,0 +1,20 @@
+{
+    "name": "brandon/symfony_autowire",
+    "require": {
+        "symfony/dependency-injection": "^4.1",
+        "symfony/routing": "^4.1",
+        "symfony/http-foundation": "^4.1",
+        "doctrine/dbal": "^2.8"
+    },
+    "authors": [
+        {
+            "name": "Brandon Braner",
+            "email": "brandon.braner@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
