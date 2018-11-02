@@ -44,6 +44,14 @@ class Model
             'host' => 'localhost',
             'driver' => 'pdo_mysql',
         );
+        $connection = $this->getConnection();
+        $this->db = $connection->createQueryBuilder();
+    }
+
+
+    public static function __callStatic($method, $parameters)
+    {
+        return (new static)->$method(...$parameters);
     }
 
     /**

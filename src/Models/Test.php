@@ -7,12 +7,10 @@ namespace App\Models;
 class Test extends Model
 {
 
-    public function _getByName($name)
+    public function getByName($name)
     {
         $query = $this->db->select('*')
-            ->from($this->table)
-            ->where('name = :name')
-            ->setParameter('name', $name);
+            ->from('test');
         return $query->execute()->fetchAll();
     }
 }
