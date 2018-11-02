@@ -55,18 +55,6 @@ class Model
     }
 
     /**
-     * @param $name
-     * @param $arguments
-     */
-    public function __call($name, $arguments)
-    {
-        $actualMethod = '_'.$name;
-        $connection = $this->getConnection();
-        $this->db = $connection->createQueryBuilder();
-        $this->$actualMethod($arguments);
-    }
-
-    /**
      * @return \Doctrine\DBAL\Connection
      * @throws \Doctrine\DBAL\DBALException
      */
